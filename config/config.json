@@ -1,0 +1,10 @@
+[
+  {
+    "platform": "win10",
+    "browserName": "chrome",
+    "version": "67.0",
+    "resolution": "1024x768",
+    "name": "this is the lettuce test",
+    "build": "LambdaTest python google search build"
+  }
+]
