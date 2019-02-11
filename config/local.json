@@ -3,6 +3,7 @@
     "version": "71.0",
     "browserName": "chrome",
     "resolution": "1024x768",
-    "platform": "win10"
+    "platform": "win10",
+    "name" : "lettuce test"
   }
 ]
