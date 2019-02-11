@@ -2,7 +2,6 @@ from paver.easy import *
 from paver.setuputils import setup
 import multiprocessing
 
-
 setup(
     name="python-lettuce-todo",
     packages=['features'],

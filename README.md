@@ -17,7 +17,7 @@ example:
         "access_key":"Your Access Key"
      }
 ```
-- Update `config.json` (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
+-For setting capaibilies,Update `local.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
  example:
 ```
    [
@@ -41,9 +41,15 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 >    - [Linux](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+Linux)
 
 ### Run tests
+##### through local
 ```bash
-paver run
+paver run local
 ```
+##### through jenkins
+```bash
+paver run jenkins
+```
+
 License
 ====
 Open sourced under [MIT License](LICENSE)
