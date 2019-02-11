@@ -46,7 +46,8 @@ def setup_desired_cap(desired_cap):
         del desired_cap["operatingSystem"]
         desired_cap["version"] = desired_cap["browserVersion"]
         del desired_cap["browserVersion"]
-        desired_cap["TunnelName"] = os.environ["LT_TUNNEL_NAME"]
+        if "LT_TUNNEL_NAME" in os.environ:
+            desired_cap["TunnelName"] = os.environ["LT_TUNNEL_NAME"]
     if "tunnel" in desired_cap:
         if desired_cap["tunnel"].lower() == "true":
             desired_cap["tunnel"] = True
