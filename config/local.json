@@ -1,9 +1,14 @@
 [
   {
-    "version": "71.0",
-    "browserName": "chrome",
-    "resolution": "1024x768",
-    "platform": "win10",
-    "name" : "lettuce test"
+    "platform" : "win10",
+	"browserName" : "chrome",
+	"version" :  "67.0",
+	"resolution": "1024x768",
+	"name": "lettuce test ",
+    "network": "true",
+	"video":  "true",
+    "visual": "true",
+	"console": "true"
+
   }
 ]

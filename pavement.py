@@ -1,8 +1,7 @@
 from paver.easy import *
 from paver.setuputils import setup
 import multiprocessing
-import json
-import os
+
 
 setup(
     name="python-lettuce-todo",
@@ -28,7 +27,7 @@ def run(args):
     :return:
     """
     jobs = []
-    for i in range(4):
+    for i in range(1):
         p = multiprocessing.Process(target=run_behave_test, args=(args[0], i,))
         jobs.append(p)
         p.start()
