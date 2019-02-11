@@ -16,23 +16,19 @@ setup(
 )
 
 
-def run_behave_test(task_id=0):
-    sh('TASK_ID=%s lettuce features/test.feature' % (task_id))
+def run_behave_test(filename, task_id=0):
+    sh('TASK_ID=%s env=%s lettuce features/test.feature ' % (task_id, filename,))
 
 
 @task
-def run():
+@consume_nargs(1)
+def run(args):
     """
 
     :return:
     """
-    desired_cap_dict = {}
-    if "LT_BROWSERS" in os.environ:
-        desired_cap_dict = os.environ["LT_BROWSERS"]
-        with open('config/config.json', 'w') as outfile:
-            json.dump(desired_cap_dict, outfile)
     jobs = []
     for i in range(2):
-        p = multiprocessing.Process(target=run_behave_test, args=(i,))
+        p = multiprocessing.Process(target=run_behave_test, args=(args[0], i,))
         jobs.append(p)
         p.start()
