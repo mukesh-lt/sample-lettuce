@@ -46,17 +46,18 @@ def setup_desired_cap(desired_cap):
         del desired_cap["operatingSystem"]
         desired_cap["version"] = desired_cap["browserVersion"]
         del desired_cap["browserVersion"]
+        desired_cap["TunnelName"] = os.environ["LT_TUNNEL_NAME"]
     if "tunnel" in desired_cap:
-        if desired_cap["tunnel"].lower()=="true":
+        if desired_cap["tunnel"].lower() == "true":
             desired_cap["tunnel"] = True
-        elif desired_cap["tunnel"].lower()=="false":
+        elif desired_cap["tunnel"].lower() == "false":
             desired_cap["tunnel"] = False
-    if "console" in  desired_cap:
+    if "console" in desired_cap:
         if desired_cap["console"].lower() == "true":
             desired_cap["console"] = True
         elif desired_cap["console"].lower() == "false":
             desired_cap["console"] = False
-    if "network" in  desired_cap:
+    if "network" in desired_cap:
         if desired_cap["network"].lower() == "true":
             desired_cap["network"] = True
         elif desired_cap["network"].lower() == "false":
