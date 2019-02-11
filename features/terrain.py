@@ -7,13 +7,13 @@ import json
 TASK_ID = int(os.environ['TASK_ID']) if 'TASK_ID' in os.environ else 0
 with open("config/config.json") as data_file:
     CONFIG = json.load(data_file)
-
 with open("config/user.json") as data_file:
     USER_CONFIG = json.load(data_file)
 
 username = os.environ["LT_USERNAME"] if "LT_USERNAME" in os.environ else USER_CONFIG["username"]
 authkey = os.environ["LT_ACCESS_KEY"] if "LT_ACCESS_KEY" in os.environ else USER_CONFIG["access_key"]
 desired_cap = {}
+
 
 @before.each_feature
 def setup(feature):
@@ -25,7 +25,7 @@ def setup(feature):
 
 
 
+
 @after.each_feature
 def exit(feature):
     world.browser.quit()
-
