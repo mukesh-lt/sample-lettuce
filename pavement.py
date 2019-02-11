@@ -28,7 +28,7 @@ def run(args):
     :return:
     """
     jobs = []
-    for i in range(2):
+    for i in range(4):
         p = multiprocessing.Process(target=run_behave_test, args=(args[0], i,))
         jobs.append(p)
         p.start()
