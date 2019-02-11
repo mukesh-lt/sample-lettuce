@@ -28,7 +28,6 @@ authkey = os.environ["LT_ACCESS_KEY"] if "LT_ACCESS_KEY" in os.environ else USER
 @before.each_feature
 def setup(feature):
     desired_cap = setup_desired_cap(CONFIG[TASK_ID])
-    print(desired_cap)
     world.browser = webdriver.Remote(
         desired_capabilities=desired_cap,
         command_executor="https://%s:%s@hub.lambdatest.com:443/wd/hub" % (username, authkey)

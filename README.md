@@ -2,7 +2,7 @@
 ---
 
 # python-lettuce-todo
-behave integration with LambdaTest
+lettuce integration with LambdaTest<br/>
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### Setup
@@ -45,6 +45,7 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 ```bash
 paver run local
 ```
+
 ##### through jenkins
 ```bash
 paver run jenkins
