@@ -1,6 +1,10 @@
 from lettuce import *
 from nose.tools import assert_equals
 
+"""
+Selenium steps to configure behave test scenarios
+"""
+
 
 @step(u'visit url "(.*?)"')
 def visit_url(step, url):
