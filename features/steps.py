@@ -1,5 +1,5 @@
 from lettuce import *
-from nose.tools import assert_equals
+from nose.tools import *
 
 """
 Selenium steps to configure behave test scenarios
