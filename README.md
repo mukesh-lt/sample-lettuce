@@ -47,12 +47,12 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 >    - [Linux](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+Linux)
 
 ### Run tests
-##### Running tests through local
+##### Running tests
 ```bash
 paver run 
 ```
 
-##### Running tests through jenkins
+##### Running tests through LambdaTest Jenkins Plugin
 ```bash
 paver run jenkins
 ```
