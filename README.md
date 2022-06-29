@@ -8,7 +8,7 @@
 
 ```
 sudo apt install python-pip
-sudo apt install python
+sudo apt install python 2.7.18
 ```
 
 2. The recommended way to run your tests would be in virtualenv. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules specified in the requirements.txt file.
